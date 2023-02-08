@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Appointmentform from "./components/Appointmentform.js";
+import Location from "./components/Location.js";
+import Home from "./components/Home.js";
+import Aboutus from "./components/Aboutus.js";
+import Nav from "./components/Nav.js";
+import Footer from "./components/Footer.js";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="App" >
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/appform" element={<Appointmentform />} />
+          <Route path="/location" element={<Location />} />
+          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+      
+      
+    </div>    
   );
-}
+};
 
 export default App;
