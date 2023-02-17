@@ -4,6 +4,7 @@ import Location from "./components/Location.js";
 import Home from "./components/Home.js";
 import Aboutus from "./components/Aboutus.js";
 import Nav from "./components/Nav.js";
+import ProductsList from "./components/ProductsList.js";
 import Footer from "./components/Footer.js";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/appform" element={<Appointmentform />} />
           <Route path="/location" element={<Location />} />
           <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/productslist" element={<ProductsList />} />
           <Route path="/" element={<Home />} />
         </Routes>
         <Footer />
