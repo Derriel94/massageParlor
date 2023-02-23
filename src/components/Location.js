@@ -2,7 +2,7 @@ import React from 'react'
 
 function Location() {
 	return (
-		<div>
+		<div className="location">
 			<div style={{paddingTop: "100px"}}><h1>Come see us at Our New Location!</h1></div>
 			<iframe 
 			title="location"

@@ -1,42 +1,170 @@
 .App {
-  text-align: center;
+/*  text-align: center;*/
+margin: 0;
+padding: 0;
+height: 100%;
+width: 100%;
 font-family: 'Pacifico', cursive;
+font-size: 20px;
+}
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./../public/cottonbrostudio.jpg');
+  height: 60vh;
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#headerbtn {
+  visibility: hidden;
+  border-top: 2px solid rgba(0, 255, 240);
+  width: 100vw;
+  background-color: rgba(255, 0, 180, .8);
+  font-size: 2rem;
+  color: rgba(0, 255, 240);
+  text-decoration: none;
+
+}
+.headertxt {
+  font-size: 6rem;
+  color: rgba(0, 255, 240);
+}
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 0, 180,.2)), url('./../public/polinatankilevitch.jpg');
+  height: 50vh;
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 0, 180,.7);
+}
+.bannerbtn {
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 2rem;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.bannerbtn:hover {
+  background-color: rgba(255, 255, 255, .5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Home1 {
+  display: flex;
+  justify-content: space-around;
+}
+.Home1 > div {
+  width: 500px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Home2 {
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255,.2)), url('./../public/arinakrasnikova.jpg');
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    border-radius: 20px;
+    color: rgba(0, 255, 240);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Home2 > div {
+  width: 500px;
+}
+.toRight {
+  padding-left: 200px;
+}
+.Home2-2 {
+  margin-top: 100px;
+}
+.Home2-2 div {
+  margin-top: 50px;
+}
+.location {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+@media screen and (max-width: 550px) {
+  .App {
+    font-size: 12px;
+    max-height: 100vh;  
+    overflow: hidden;
+  }
+  .header {
+    height: 90vh;
+  }
+  .headertxt {
+    font-size: 2rem;
+    /*margin-right: 475px;
+    transition: .;*/
+  }
+  .headertxt {
+    margin-right: 0px;
+  }
+  .Home1 {
+    display: none;
+  }
+  .Home2 {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  #headerbtn {
+    visibility: visible;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+/*END of HOME STYLE*/
+
+/*Navigation styling*/
+.nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
   color: white;
+  background-color: rgba(255, 0, 180,.7);
+
+}
+.mobileNav {
+  display: none;
+
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 550px) { 
+  .nav {
+    display: none;
+  }
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+/*    width: 100vw;*/
+    
+ 
+
+  }
+  .mobile-nav-link {
+    transition: .5;
+    color: rgba(0, 255, 240);
+  }
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .nav-link{
   color: rgba(0, 255, 240,.5);
   transition: .4s;
@@ -59,4 +187,61 @@ font-family: 'Pacifico', cursive;
   background-color: rgba(0, 255, 240,.5);
   border-radius: 5px;
 
+}
+.footer {
+  text-align: center;
+}
+.aboutus {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 0, 180,.2)), url('./../public/polinatankilevitch.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: rgba(0, 255, 240);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+
+}
+.aboutus1 {
+  width: 650px;
+}
+.aboutus1-2 {
+  display: flex;
+}
+.aboutus1-2 > div {
+  margin: 15px;
+}
+.aboutus2 {
+  background-color: rgba(255, 255, 255, 1.0);
+  height: 600px;
+  width: 450px;
+  border-radius: 10px;
+
+}
+
+#subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form {
+  text-align: center;
+}
+.formbanner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./../public/arinakrasnikova.jpg');
+  height: 50vh;
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  color: white;
 }
