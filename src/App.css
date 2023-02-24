@@ -141,16 +141,21 @@ font-size: 20px;
   background-color: rgba(255, 0, 180,.7);
 
 }
-.mobileNav {
+.mobile-nav-items {
   display: none;
 
 }
-
+.dropdown {
+ display: none;
+}
+.show {
+  display: block;
+}
 @media screen and (max-width: 550px) { 
   .nav {
     display: none;
   }
-  .mobileNav {
+  .mobile-nav-items {
     display: flex;
     flex-direction: column;
 /*    width: 100vw;*/

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Navitems from './Navitems';
 import { Link } from "react-router-dom";
 
 function Nav() {
@@ -79,17 +80,10 @@ function Nav() {
 						<Link to="/cms" className="nav-link" style={{color: "rgba(0, 255, 240)", textDecoration: "none"}}><h3>CMS</h3></Link>
 				</div>
 				<div onClick={handleClick} className="mobileNav">
-					  <Link to="/" className="mobile-nav-link" style={{backgroundColor: "rgba(255, 0, 180, .8)" ,color: "rgba(0, 255, 240)", textDecoration: "none"}}><h3>Home</h3></Link>
-						{display
-						?
-						submenu.map((item, index) => {
-							return (
-							<Link to={item.url} key={index} className="mobile-nav-link" style={{backgroundColor: "rgba(255, 0, 180,.5)", textDecoration: "none"}}><h3>{item.title}</h3></Link>
-							)
-						})
-						:
-						<div style={{display: "none"}}></div>
-						}
+					  {/*<Link to="/" className="mobile-nav-link" style={{backgroundColor: "rgba(255, 0, 180, .8)" ,color: "rgba(0, 255, 240)", textDecoration: "none"}}><h3>Home</h3></Link>*/}
+					{dropDownItems.map((navitem, index)=> {
+						return <Navitems items={navitem} key={index} />;
+					})}
 				</div>
 			</div>
 	)
