@@ -1,22 +1,23 @@
 .App {
 /*  text-align: center;*/
-margin: 0;
-padding: 0;
-height: 100%;
-width: 100%;
-font-family: 'Pacifico', cursive;
-font-size: 20px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
 }
+
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./../public/cottonbrostudio.jpg');
   height: 60vh;
   background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #headerbtn {
   visibility: hidden;
@@ -36,15 +37,15 @@ font-size: 20px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 0, 180,.2)), url('./../public/polinatankilevitch.jpg');
   height: 50vh;
   background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    border: 1px solid rgb(255, 0, 180,.7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 0, 180,.7);
 }
 .bannerbtn {
   border: 2px solid black;
