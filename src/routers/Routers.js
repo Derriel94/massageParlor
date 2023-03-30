@@ -8,20 +8,21 @@ import Checkout from "./../pages/Checkout.js";
 import {CMS} from "./../components/CMS.js";
 import {loadStripe} from '@stripe/stripe-js';
 import Shop from "./../pages/Shop.jsx";
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 
 function Routers() {
 	return (
 		 <Routes>
+         <Route path="/" element={<Navigate to='home'/>} />
           <Route path="/appform" element={<Appointmentform />} />
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop:id" element={<ProductDetails />} />
           <Route path="/cms" element={<CMS />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
 	)
 }
 
-export default Routers
+export default Routers;

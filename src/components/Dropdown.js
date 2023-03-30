@@ -1,17 +1,30 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import { Link } from "react-router-dom";
 
-function Dropdown( {submenus, dropdown} ) {
-	return (
-		<div className={`dropdown ${dropdown ? "show" : ""}`}>
-			{submenus.map((submenu, index)=> {
+function Dropdown( {submenus, dropdown, display, setDisplay,navitem} ) {
+	
+	const [shiftlink, setShiftLink] = useState(false);
 
-				return (
-					<div className={`dropdown ${dropdown ? "show" : ""}`}>
-					<Link to={submenu.url} role="button" className="mobile-nav-link" style={{backgroundColor: "rgba(255, 0, 180, .8)" ,color: "rgba(0, 255, 240)", textDecoration: "none"}}><h3>{submenu.title}</h3></Link>
-					</div>
-					);
-			})}
+	const shiftLink =()=> {
+		if (display == true) {
+			setShiftLink(true);
+		} else {
+			setShiftLink(false)
+		}
+	}
+	const refreshpage =()=> {
+			setDisplay(false)
+	}
+
+	useEffect(() => {
+		shiftLink()
+		return () => {
+			
+		};
+	}, [display])
+	return (
+		<div className={`mobilenavlinkcontainerdiv${navitem.title} ${shiftlink ? "shiftlink" : ""}`}>
+			<Link to={navitem.url} role="button" onClick={refreshpage} className={`mobile-nav-link`}>{navitem.title}</Link>		
 		</div>
 	)
 }

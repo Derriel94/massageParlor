@@ -6,10 +6,13 @@
   width: 100%;
   font-family: 'Pacifico', cursive;
   font-size: 20px;
+  color: black;
+  text-shadow: 5px 7px 7px #D7DFAE;
+/*  position: relative;*/
 }
 
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./../public/cottonbrostudio.jpg');
+  background-image: linear-gradient(rgba(167,195,181, .4), rgba(244,191,149, .1)), url('./../public/cottonbrostudio.jpg');
   height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,34 +21,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 10px 10px 20px 5px black;
 }
-#headerbtn {
-  visibility: hidden;
-  border-top: 2px solid rgba(0, 255, 240);
-  width: 100vw;
-  background-color: rgba(255, 0, 180, .8);
-  font-size: 2rem;
-  color: rgba(0, 255, 240);
-  text-decoration: none;
 
-}
 .headertxt {
   font-size: 6rem;
-  color: rgba(0, 255, 240);
+  color: black;
+  text-shadow: 5px 10px 10px #D7DFAE;
+  transition: 1s;
 }
+ .headertxt:hover {
+    text-shadow: 5px 10px 10px white;
+  }
 .banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 0, 180,.2)), url('./../public/polinatankilevitch.jpg');
-  height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  border: 1px solid rgb(255, 0, 180,.7);
+  border-radius: 300px;
+  box-shadow: 10px 10px 20px 20px black;
+  border: 1px solid #A7C3B5;
 }
 .bannerbtn {
   border: 2px solid black;
@@ -55,14 +54,21 @@
   padding-right: 5px;
   padding-bottom: 5px;
   cursor: pointer;
+  text-shadow: 1px 1px 5px #A7C3B5;
+  box-shadow: 1px 1px 5px 5px black;
+  transition: 1s;
 }
 .bannerbtn:hover {
   background-color: rgba(255, 255, 255, .5);
+  text-shadow: 1px 1px 1px #A7C3B5;
+  box-shadow: 1px 1px 2px 2px black;
+
 }
 
 .Home1 {
   display: flex;
   justify-content: space-around;
+  box-shadow: 10px 10px 20px 5px black;
 }
 .Home1 > div {
   width: 500px;
@@ -73,12 +79,12 @@
   justify-content: space-around;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255,.2)), url('./../public/arinakrasnikova.jpg');
   background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    border-radius: 20px;
-    color: rgba(0, 255, 240);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px 5px black;
 }
 .Home2 > div {
   width: 500px;
@@ -92,44 +98,23 @@
 .Home2-2 div {
   margin-top: 50px;
 }
-.location {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#location {
+  box-shadow: 10px 10px 20px 5px black;
+  border-radius: 5px;
+}
+#headerbtn {
+  display: none;
+  border: 2px solid #A7C3B5;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 3px white;
+  text-shadow: 5px 10px 10px white;
+  color: #A7C3B5;
+  width: 100vw;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, .7);
+  text-decoration: none;
 }
 
-@media screen and (max-width: 550px) {
-  .App {
-    font-size: 12px;
-    max-height: 100vh;  
-    overflow: hidden;
-  }
-  .header {
-    height: 90vh;
-  }
-  .headertxt {
-    font-size: 2rem;
-    /*margin-right: 475px;
-    transition: .;*/
-  }
-  .headertxt {
-    margin-right: 0px;
-  }
-  .Home1 {
-    display: none;
-  }
-  .Home2 {
-    display: none;
-  }
-  .footer {
-    display: none;
-  }
-  #headerbtn {
-    visibility: visible;
-    position: absolute;
-    bottom: 0;
-  }
-}
 
 /*END of HOME STYLE*/
 
@@ -138,41 +123,54 @@
   display: flex;
   justify-content: space-around;
   width: 100vw;
-  color: white;
-  background-color: rgba(255, 0, 180,.7);
 
-}
-.mobile-nav-items {
-  display: none;
 
 }
 .dropdown {
- display: none;
+   display: none;
+/* transition: height 3s width 3s transform 3s;*/
+   transition: 1s;
+/*   transition-timing-function: ease-in;*/
+
 }
 .show {
-  display: block;
-}
-@media screen and (max-width: 550px) { 
-  .nav {
-    display: none;
-  }
-  .mobile-nav-items {
-    display: flex;
-    flex-direction: column;
-/*    width: 100vw;*/
-    
- 
-
-  }
-  .mobile-nav-link {
-    transition: .5;
-    color: rgba(0, 255, 240);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  z-index: 1;
+  text-align: center;
 
 }
+
+.mobileNavButton{
+  display: none;
+  height: 30px;
+  width: 100%;
+  padding-top: 10px;
+
+
+
+}
+/*@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}*/
+
+
 
 .nav-link{
-  color: rgba(0, 255, 240,.5);
+  color: black;
+  text-shadow: 5px 7px 7px #D7DFAE;
+  text-decoration: none;
   transition: .4s;
 
 }
@@ -185,7 +183,10 @@
   border-radius: 5px;
   height: 450px;
   width: 450px;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 .product-img {
   height: 200px;
@@ -198,15 +199,15 @@
   text-align: center;
 }
 .aboutus {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 0, 180,.2)), url('./../public/polinatankilevitch.jpg');
-  height: 100vh;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(244,191,149,.5)), url('./../public/polinatankilevitch.jpg');
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  color: rgba(0, 255, 240);
   text-align: center;
   display: flex;
+  text-shadow: 1px 1px 2px rgba(244,191,149);
+  box-shadow: 5px 5px 10px 10px black;
   justify-content: space-around;
 
 }
@@ -224,6 +225,7 @@
   height: 600px;
   width: 450px;
   border-radius: 10px;
+  box-shadow: 2px 2px 5px 5px black;
 
 }
 
@@ -231,6 +233,18 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-size: 1.5rem;
+}
+#icon {
+  background-color: white;
+  border-radius: 200px;
+  box-shadow: 2px 2px 5px 5px black;
+  transition: 1s;
+}
+#icon:hover {
+  box-shadow: 1px 1px 1px 1px white;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.2));
+
 }
 
 .form {
@@ -240,14 +254,153 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./../public/arinakrasnikova.jpg');
   height: 50vh;
   background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-top: 100px;
   margin-bottom: 200px;
   color: white;
+  box-shadow: 10px 10px 20px 5px black;
+}
+#shadowradius {
+    box-shadow: 1px 1px 2px 2px black;
+    border-radius: 15px;
+
+}
+.cms{
+  display: flex;
+  justify-content: space-around;
+}
+#cmsform{
+  display: flex;
+  flex-direction: column;
+}
+#cmsform0{
+
+}
+#cmsform1{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (width <= 550px) { 
+  .nav {
+    display: none;
+  }
+  .mobileNavButton{
+    text-align: left;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    z-index: 1;
+    background-color: white;
+    text-shadow: 2px 5px 5px #D7DFAE;
+    box-shadow: 1px 1px 2px 2px black;
+  }
+  .mobilenavlinkcontainerdivHome,
+  .mobilenavlinkcontainerdivAboutUs,
+  .mobilenavlinkcontainerdivProducts,
+  .mobilenavlinkcontainerdivCheckout,
+  .mobilenavlinkcontainerdivAppointments,
+  .mobilenavlinkcontainerdivCMS
+   {
+    margin-top: 5px;
+    padding: 1px;
+    border: 1px solid #d7dfae;
+    height: 100%;     
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255);
+    transition: 1s;
+    margin-left: -100px;
+  }
+  .shiftlink {
+    margin-left: 0px;
+    transition: 1s;
+  }
+  .mobile-nav-link {
+    color: black;
+    text-decoration: none;
+  }
+  .aboutus {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+  }
+  .aboutus1 {
+  width: auto;
+  height: 100%;
+  }
+.aboutus1-2 {
+  display: flex;
+  flex-direction: column;
+
+  }
+.aboutus1-2 > div {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  }
+
+#subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.aboutus2 {
+  background-color: rgba(255, 255, 255, 1.0);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 5px black;
+   height: 100%;
+  width: auto;
+
+  }
+
+}
+@media screen and (max-width: 550px) {
+  .App {
+    font-size: 12px;
+    max-height: 100vh;  
+/*    overflow: hidden;*/
+    text-align: center;
+  }
+  .header {
+    height: 100vh;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .headertxt {
+    font-size: 2rem;
+    /*margin-right: 475px;
+    transition: .;*/
+  }
+  .headertxt:hover {
+    text-shadow: 1px 1px 1px white;
+  }
+ 
+  .Home1 {
+    display: none;
+  }
+  .Home2 {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  #headerbtn {
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
 }

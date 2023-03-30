@@ -1,8 +1,8 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import Inventory from './Products.js';
 
-const CMS = () => {
+const CMS = ({display, setDisplay}) => {
 
 	// axios.defaults.withCredentials = true;
 
@@ -82,10 +82,10 @@ const CMS = () => {
   	}
   	console.log(newProduct)
 	return (
-		<div style={{display: "flex", justifyContent: "space-around", flexFlow: "wrap", paddingTop: "20px"}}>
-			<div>
+		<div className="cms">
+			<div id="cmsform">
 				<h1>Inventory Management</h1>
-				<div>
+				<div id="cmsform1">
 					<h2>Add Item:</h2>
 					Name
 					<input type="text" name="name" onChange={(e)=>setProductName(e.target.value)} />
@@ -97,22 +97,23 @@ const CMS = () => {
 					<input type="number" name="id" onChange={(e)=>setId(e.target.value)} />
 					Image
 					<input type="file" name="file" onChange={saveImageFile}/>
-					<button onClick={addItemToInventory}>Submit</button>
+					<div><button onClick={addItemToInventory}>Submit</button></div>
 				</div>
 			</div>
 
-
+			<div>
 			{productl.map(({ products, id, productName, desc, imgUrl, price } )=>{
 					return (<div className="product-card" key={id}>
-								<h1 className="product-title">{productName}</h1>
+								<p className="product-title">{productName}</p>
 								<div className="product-desc">
-										<h5>Price: {price}.00$ plus tax.</h5>
-										<h5>Description: {desc}</h5>
+										<p>Price: {price}.00$ plus tax.</p>
+										<p>Description: {desc}</p>
 									</div>
 								<img className="product-img" src={imgUrl} alt="item"/>
 								<div><button style={{marginRight: "10px", cursor: "Pointer"}}>Add To Cart</button><button style={{cursor: "Pointer"}}>CheckOut</button></div>
 						   </div>);	
 				})}
+			</div>
 		</div>
 	)
 }
