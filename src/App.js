@@ -13,15 +13,10 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 
-// const stripePromise = loadStripe('pk_test_51McMorK2iy5RQfund1JgT6UaQc03QWwWuRQbT5dS36itIbTJcMRLFfJGrYlztQnjlzpqSVcQ7tu8nswpZPa94Y8d00fyNqkl10');
 
 const App = () => {
   const [display, setDisplay] = useState(false);
 
-  const options = {
-    // passing the client secret obtained from the server
-    clientSecret: '',
-  };
 
   return (
     <div className="App">

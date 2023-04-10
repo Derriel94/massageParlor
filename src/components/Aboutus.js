@@ -8,7 +8,7 @@ function Aboutus({display, setDisplay}) {
 			<div className="aboutus1">
 				<div className="aboutus1-1">
 					<div><h1>All Natural Product Line</h1></div>
-					<div style={{width: "300px", margin: "auto",paddingTop: "20px" }}><h3>We only use Natural products for our guests. No more getting home 
+					<div><h3>We only use Natural products for our guests. No more getting home 
 							 and feeling like you have a chemical burn on your skin. No more oil filled
 						 skin. We garuntee relaxation and comfort with all our massuses!</h3></div>
 				</div>
