@@ -11,16 +11,18 @@ import Footer from "./components/Footer.js";
 import Layout from './components/Layout.jsx'
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-
+import {registerUser} from "./firebaseConfig.js";
 
 
 const App = () => {
   const [display, setDisplay] = useState(false);
-
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  registerUser(email, password);
 
   return (
     <div className="App">
-        <Nav display={display} setDisplay={setDisplay}/>  
+        <Nav display={display} setDisplay={setDisplay}/> 
         <Layout display={display} setDisplay={setDisplay}/>   
     </div>    
   );

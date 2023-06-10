@@ -6,6 +6,7 @@ import Home from "./../pages/Home.js";
 import Aboutus from "./../components/Aboutus.js";
 import Nav from "./../components/Nav.js";
 import ProductDetails from "./../pages/ProductDetails.jsx";
+import ProductsList from "./../components/ProductsList.js";
 import Checkout from "./../pages/Checkout.js";
 import {CMS} from "./../components/CMS.js";
 import Shop from "./../pages/Shop.jsx";

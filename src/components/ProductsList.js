@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import Inventory from './Products.js';
 import productl from './CMS.js'
+import { Link } from "react-router-dom";
+
 
 
 function ProductsList(  ) {
@@ -15,15 +17,10 @@ function ProductsList(  ) {
 
 	return (
 		<div style={{textAlign:"center", display: "flex", justifyContent: "space-around", flexFlow: "wrap", paddingTop: "20px"}}>
-			{productl.map(({ products, id, productName, desc, imgUrl, price } )=>{
+			{Inventory.products.map(({ products, id, productName, desc, imgUrl, price } )=>{
 					return (<div className="product-card" key={id}>
-								<h1 className="product-title">{productName}</h1>
-								<div className="product-desc">
-										<h5>Price: {price}.00$ plus tax.</h5>
-										<h5>Description: {desc}</h5>
-									</div>
-								<img className="product-img" src={imgUrl} alt="item"/>
-								<div><button style={{marginRight: "10px", cursor: "Pointer"}}>Add To Cart</button><button style={{cursor: "Pointer"}}>CheckOut</button></div>
+								<div className="product-title">{productName}</div>
+								<Link to="" ><img className="product-img" src={imgUrl} alt="item"/> </Link>
 						   </div>);	
 				})}
 		</div>
